@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">My_Calculator</string>
+
+    <string-array name="ChooseCalculator">
+        <item>Classic</item>
+        <item>Classic Custom</item>
+        <item>Engineering</item>
+        <item>Programmer</item>
+        <item>Statistics</item>
+    </string-array>
+
+    <string name="B_GetHelp_TEXT">HELP ME</string>
+    <string name="B_Go_TEXT">GO</string>
+
+    <string name="B_Back_TEXT">OK</string>
+
+    <string name="TV_GoAway">Instructions for calculator, Really?</string>
+
+    <string name="Number_0">0</string>
+    <string name="Number_1">1</string>
+    <string name="Number_2">2</string>
+    <string name="Number_3">3</string>
+    <string name="Number_4">4</string>
+    <string name="Number_5">5</string>
+    <string name="Number_6">6</string>
+    <string name="Number_7">7</string>
+    <string name="Number_8">8</string>
+    <string name="Number_9">9</string>
+
+    <string name="commandPlus">+</string>
+    <string name="commandMinus">-</string>
+    <string name="commandDivide">/</string>
+    <string name="commandMultiply">*</string>
+    <string name="commandGetResult">=</string>
+
+    <string name="additionallyComma">,</string>
+    <string name="additionallyPercentage">%</string>
+    <string name="additionallyChangeSign">+/-</string>
+    <string name="additionallyBackspace">AB| X</string>
+    <string name="additionallyAllClearButton">AC</string>
+</resources>

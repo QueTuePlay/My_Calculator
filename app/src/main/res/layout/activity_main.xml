@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="itsoftware.datdot.my_calculator.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Spinner
+            android:id="@+id/Spin_Choose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/colorLightGray"
+            android:entries="@array/ChooseCalculator"
+            android:gravity="center"
+            android:popupBackground="@color/colorLightGray" />
+
+        <Switch
+            android:id="@+id/SwitchMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/Spin_Choose"
+            android:layout_alignBottom="@+id/Spin_Choose"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/TV_Pole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Spin_Choose"
+            android:gravity="right"
+            android:textColor="@color/colorWhite"
+            android:textSize="80sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="92dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/B_GetHelp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/TV_Pole"
+            android:layout_margin="@dimen/activity_margin"
+            android:weightSum="1">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2">
+
+                <Button
+                    android:id="@+id/B_AllClear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorGreen"
+                    android:text="@string/additionallyAllClearButton"
+                    android:textColor="@color/colorLightGray"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/B_ChangeSign"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorGreen"
+                    android:text="@string/additionallyChangeSign"
+                    android:textColor="@color/colorLightGray"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/B_Percentage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorGreen"
+                    android:text="@string/additionallyPercentage"
+                    android:textColor="@color/colorLightGray"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/B_Divide"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorLightOrange"
+                    android:text="@string/commandDivide"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2">
+
+                <Button
+                    android:id="@+id/B_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorSilver"
+                    android:text="@string/Number_7"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/B_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorSilver"
+                    android:text="@string/Number_8"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/B_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorSilver"
+                    android:text="@string/Number_9"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/B_Multiply"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorLightOrange"
+                    android:text="@string/commandMultiply"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2">
+
+                <Button
+                    android:id="@+id/B_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorSilver"
+                    android:text="@string/Number_4"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/B_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorSilver"
+                    android:text="@string/Number_5"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/B_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorSilver"
+                    android:text="@string/Number_6"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/B_Minus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorLightOrange"
+                    android:text="@string/commandMinus"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2">
+
+                <Button
+                    android:id="@+id/B_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorSilver"
+                    android:text="@string/Number_1"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/B_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorSilver"
+                    android:text="@string/Number_2"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/B_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorSilver"
+                    android:text="@string/Number_3"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/B_Plus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorLightOrange"
+                    android:text="@string/commandPlus"
+                    android:textSize="20sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2">
+
+                <Button
+                    android:id="@+id/B_Backspace"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorGreen"
+                    android:text="@string/additionallyBackspace"
+                    android:textColor="@color/colorLightGray"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/B_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorSilver"
+                    android:text="@string/Number_0"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/B_Comma"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorGreen"
+                    android:text="@string/additionallyComma"
+                    android:textColor="@color/colorLightGray"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/B_GetResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/colorOrange"
+                    android:text="@string/commandGetResult"
+                    android:textSize="20sp" />
+            </TableRow>
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/B_GetHelp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:backgroundTint="@color/colorDarkGray"
+            android:text="@string/B_GetHelp_TEXT" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
