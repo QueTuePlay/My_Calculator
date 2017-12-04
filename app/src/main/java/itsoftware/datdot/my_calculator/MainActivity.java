@@ -25,22 +25,39 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setTitle("");
         classic = new Classic();
+        mTextView = findViewById(R.id.TV_Pole);
 
-        Button B_GetHelp = (Button) findViewById(R.id.B_GetHelp);
+        final Button B_GetHelp = findViewById(R.id.B_GetHelp);
+
+        final Button B_0 = findViewById(R.id.B_0);
+        final Button B_1 = findViewById(R.id.B_1);
+        final Button B_2 = findViewById(R.id.B_2);
+        final Button B_3 = findViewById(R.id.B_3);
+        final Button B_4 = findViewById(R.id.B_4);
+        final Button B_5 = findViewById(R.id.B_5);
+        final Button B_6 = findViewById(R.id.B_6);
+        final Button B_7 = findViewById(R.id.B_7);
+        final Button B_8 = findViewById(R.id.B_8);
+        final Button B_9 = findViewById(R.id.B_9);
+
+        final Button B_Plus = findViewById(R.id.B_Plus);
+        final Button B_Minus = findViewById(R.id.B_Minus);
+        final Button B_Divide = findViewById(R.id.B_Divide);
+        final Button B_Multiply = findViewById(R.id.B_Multiply);
+        final Button B_GetResult = findViewById(R.id.B_GetResult);
+
+        final Button B_Comma = findViewById(R.id.B_Comma);
+        final Button B_AllClear = findViewById(R.id.B_AllClear);
+        final Button B_Backspace = findViewById(R.id.B_Backspace);
+        final Button B_ChangeSign = findViewById(R.id.B_ChangeSign);
+        final Button B_Percentage = findViewById(R.id.B_Percentage);
+
+        final ConstraintLayout ConstraintLayout = findViewById(R.id.ConstraintLayout);
+        final Switch SwitchMode = findViewById(R.id.SwitchMode);
 
         B_GetHelp.setOnClickListener(this);
-
-        final Button B_0 = (Button) findViewById(R.id.B_0);
-        final Button B_1 = (Button) findViewById(R.id.B_1);
-        final Button B_2 = (Button) findViewById(R.id.B_2);
-        final Button B_3 = (Button) findViewById(R.id.B_3);
-        final Button B_4 = (Button) findViewById(R.id.B_4);
-        final Button B_5 = (Button) findViewById(R.id.B_5);
-        final Button B_6 = (Button) findViewById(R.id.B_6);
-        final Button B_7 = (Button) findViewById(R.id.B_7);
-        final Button B_8 = (Button) findViewById(R.id.B_8);
-        final Button B_9 = (Button) findViewById(R.id.B_9);
 
         B_0.setOnClickListener(this);
         B_1.setOnClickListener(this);
@@ -53,111 +70,32 @@ public class MainActivity extends AppCompatActivity
         B_8.setOnClickListener(this);
         B_9.setOnClickListener(this);
 
-        final Button B_Plus = (Button) findViewById(R.id.B_Plus);
-        final Button B_Minus = (Button) findViewById(R.id.B_Minus);
-        final Button B_Divide = (Button) findViewById(R.id.B_Divide);
-        final Button B_Multiply = (Button) findViewById(R.id.B_Multiply);
-        final Button B_GetResult = (Button) findViewById(R.id.B_GetResult);
-
-        final Button B_Comma = (Button) findViewById(R.id.B_Comma);
-        final Button B_AllClear = (Button) findViewById(R.id.B_AllClear);
-        final Button B_Backspace = (Button) findViewById(R.id.B_Backspace);
-        final Button B_ChangeSign = (Button) findViewById(R.id.B_ChangeSign);
-        final Button B_Percentage = (Button) findViewById(R.id.B_Percentage);
+        B_Plus.setOnClickListener(this);
+        B_Minus.setOnClickListener(this);
+        B_Divide.setOnClickListener(this);
+        B_Multiply.setOnClickListener(this);
+        B_GetResult.setOnClickListener(this);
 
         B_Comma.setOnClickListener(this);
         B_AllClear.setOnClickListener(this);
         B_Backspace.setOnClickListener(this);
+        B_ChangeSign.setOnClickListener(this);
+        B_Percentage.setOnClickListener(this);
 
-        setTitle("");
-        mTextView = findViewById(R.id.TV_Pole);
         mIntent = new Intent(MainActivity.this, TakeHelp.class);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-        final ConstraintLayout ConstraintLayout = findViewById(R.id.ConstraintLayout);
         ConstraintLayout.setBackgroundColor(getResources().getColor(R.color.colorBlack));
-
-        final Switch SwitchMode = (Switch) findViewById(R.id.SwitchMode);
         SwitchMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b) {
-                    ConstraintLayout.setBackgroundColor(getResources().getColor(R.color.colorSilver));
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        B_0.setBackgroundTintList(getResources().getColorStateList(R.color.colorBlack));
-                        B_1.setBackgroundTintList(getResources().getColorStateList(R.color.colorBlack));
-                        B_2.setBackgroundTintList(getResources().getColorStateList(R.color.colorBlack));
-                        B_3.setBackgroundTintList(getResources().getColorStateList(R.color.colorBlack));
-                        B_4.setBackgroundTintList(getResources().getColorStateList(R.color.colorBlack));
-                        B_5.setBackgroundTintList(getResources().getColorStateList(R.color.colorBlack));
-                        B_6.setBackgroundTintList(getResources().getColorStateList(R.color.colorBlack));
-                        B_7.setBackgroundTintList(getResources().getColorStateList(R.color.colorBlack));
-                        B_8.setBackgroundTintList(getResources().getColorStateList(R.color.colorBlack));
-                        B_9.setBackgroundTintList(getResources().getColorStateList(R.color.colorBlack));
 
-                        B_0.setTextColor(getResources().getColor(R.color.colorSilver));
-                        B_1.setTextColor(getResources().getColor(R.color.colorSilver));
-                        B_2.setTextColor(getResources().getColor(R.color.colorSilver));
-                        B_3.setTextColor(getResources().getColor(R.color.colorSilver));
-                        B_4.setTextColor(getResources().getColor(R.color.colorSilver));
-                        B_5.setTextColor(getResources().getColor(R.color.colorSilver));
-                        B_6.setTextColor(getResources().getColor(R.color.colorSilver));
-                        B_7.setTextColor(getResources().getColor(R.color.colorSilver));
-                        B_8.setTextColor(getResources().getColor(R.color.colorSilver));
-                        B_9.setTextColor(getResources().getColor(R.color.colorSilver));
-
-                        mTextView.setTextColor(getResources().getColor(R.color.colorBLACK));
-
-                        B_Plus.setTextColor(getResources().getColor(R.color.colorSilver));
-                        B_Minus.setTextColor(getResources().getColor(R.color.colorSilver));
-                        B_Divide.setTextColor(getResources().getColor(R.color.colorSilver));
-                        B_Multiply.setTextColor(getResources().getColor(R.color.colorSilver));
-                        B_GetResult.setTextColor(getResources().getColor(R.color.colorSilver));
-
-                        B_Comma.setTextColor(getResources().getColor(R.color.colorSilver));
-                        B_AllClear.setTextColor(getResources().getColor(R.color.colorSilver));
-                        B_Backspace.setTextColor(getResources().getColor(R.color.colorSilver));
-                        B_ChangeSign.setTextColor(getResources().getColor(R.color.colorSilver));
-                        B_Percentage.setTextColor(getResources().getColor(R.color.colorSilver));
                     }
                 } else {
-                    ConstraintLayout.setBackgroundColor(getResources().getColor(R.color.colorBlack));
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                        B_0.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
-                        B_1.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
-                        B_2.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
-                        B_3.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
-                        B_4.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
-                        B_5.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
-                        B_6.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
-                        B_7.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
-                        B_8.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
-                        B_9.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
 
-                        mTextView.setTextColor(getResources().getColor(R.color.colorWhite));
-
-                        B_0.setTextColor(getResources().getColor(R.color.colorBlack));
-                        B_1.setTextColor(getResources().getColor(R.color.colorBlack));
-                        B_2.setTextColor(getResources().getColor(R.color.colorBlack));
-                        B_3.setTextColor(getResources().getColor(R.color.colorBlack));
-                        B_4.setTextColor(getResources().getColor(R.color.colorBlack));
-                        B_5.setTextColor(getResources().getColor(R.color.colorBlack));
-                        B_6.setTextColor(getResources().getColor(R.color.colorBlack));
-                        B_7.setTextColor(getResources().getColor(R.color.colorBlack));
-                        B_8.setTextColor(getResources().getColor(R.color.colorBlack));
-                        B_9.setTextColor(getResources().getColor(R.color.colorBlack));
-
-                        B_Plus.setTextColor(getResources().getColor(R.color.colorBlack));
-                        B_Minus.setTextColor(getResources().getColor(R.color.colorBlack));
-                        B_Divide.setTextColor(getResources().getColor(R.color.colorBlack));
-                        B_Multiply.setTextColor(getResources().getColor(R.color.colorBlack));
-                        B_GetResult.setTextColor(getResources().getColor(R.color.colorBlack));
-
-                        B_Comma.setTextColor(getResources().getColor(R.color.colorBlack));
-                        B_AllClear.setTextColor(getResources().getColor(R.color.colorBlack));
-                        B_Backspace.setTextColor(getResources().getColor(R.color.colorBlack));
-                        B_ChangeSign.setTextColor(getResources().getColor(R.color.colorBlack));
-                        B_Percentage.setTextColor(getResources().getColor(R.color.colorBlack));
                     }
                 }
             }
@@ -190,6 +128,8 @@ public class MainActivity extends AppCompatActivity
                     break;
             }
         } else {
+            mString = "";
+            mTextView.setText(mString);
             Toast.makeText(getApplicationContext(), "Error!", Toast.LENGTH_SHORT).show();
         }
     }

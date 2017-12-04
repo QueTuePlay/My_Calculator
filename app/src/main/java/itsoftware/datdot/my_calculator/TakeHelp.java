@@ -19,10 +19,10 @@ public class TakeHelp extends AppCompatActivity implements View.OnClickListener 
         ConstraintLayout.setBackgroundColor(getResources().getColor(R.color.colorBlack));
 
         TextView TV_GoAway = findViewById(R.id.TV_GoAway);
-        TV_GoAway.setTextColor(getResources().getColor(R.color.colorLightGray));
+        TV_GoAway.setTextColor(getResources().getColor(R.color.colorLightlyGray));
 
         Button B_Back = findViewById(R.id.B_Back);
-        B_Back.setBackgroundColor(getResources().getColor(R.color.colorDarkGray));
+        B_Back.setBackgroundColor(getResources().getColor(R.color.colorDarklyGrey));
         B_Back.setTextColor(getResources().getColor(R.color.colorBlack));
         B_Back.setOnClickListener(this);
     }

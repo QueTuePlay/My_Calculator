@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
@@ -17,10 +16,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:background="@color/colorLightGray"
+            android:background="@color/colorLightlyGray"
             android:entries="@array/ChooseCalculator"
             android:gravity="center"
-            android:popupBackground="@color/colorLightGray" />
+            android:popupBackground="@color/colorLightlyGray" />
 
         <Switch
             android:id="@+id/SwitchMode"
@@ -35,8 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/Spin_Choose"
-            android:gravity="right"
-            android:textColor="@color/colorWhite"
+            android:gravity="end"
             android:textSize="80sp"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="92dp"
@@ -60,9 +58,7 @@
                     android:id="@+id/B_AllClear"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorGreen"
                     android:text="@string/additionallyAllClearButton"
-                    android:textColor="@color/colorLightGray"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -70,9 +66,7 @@
                     android:id="@+id/B_ChangeSign"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorGreen"
                     android:text="@string/additionallyChangeSign"
-                    android:textColor="@color/colorLightGray"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -80,9 +74,7 @@
                     android:id="@+id/B_Percentage"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorGreen"
                     android:text="@string/additionallyPercentage"
-                    android:textColor="@color/colorLightGray"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -90,7 +82,6 @@
                     android:id="@+id/B_Divide"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorLightOrange"
                     android:text="@string/commandDivide"
                     android:textSize="20sp" />
             </TableRow>
@@ -104,7 +95,6 @@
                     android:id="@+id/B_7"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorSilver"
                     android:text="@string/Number_7"
                     android:textSize="16sp" />
 
@@ -112,7 +102,6 @@
                     android:id="@+id/B_8"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorSilver"
                     android:text="@string/Number_8"
                     android:textSize="16sp" />
 
@@ -120,7 +109,6 @@
                     android:id="@+id/B_9"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorSilver"
                     android:text="@string/Number_9"
                     android:textSize="16sp" />
 
@@ -128,7 +116,6 @@
                     android:id="@+id/B_Multiply"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorLightOrange"
                     android:text="@string/commandMultiply"
                     android:textSize="20sp" />
             </TableRow>
@@ -142,7 +129,6 @@
                     android:id="@+id/B_4"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorSilver"
                     android:text="@string/Number_4"
                     android:textSize="16sp" />
 
@@ -150,7 +136,6 @@
                     android:id="@+id/B_5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorSilver"
                     android:text="@string/Number_5"
                     android:textSize="16sp" />
 
@@ -158,7 +143,6 @@
                     android:id="@+id/B_6"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorSilver"
                     android:text="@string/Number_6"
                     android:textSize="16sp" />
 
@@ -166,7 +150,6 @@
                     android:id="@+id/B_Minus"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorLightOrange"
                     android:text="@string/commandMinus"
                     android:textSize="16sp" />
             </TableRow>
@@ -180,7 +163,6 @@
                     android:id="@+id/B_1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorSilver"
                     android:text="@string/Number_1"
                     android:textSize="16sp" />
 
@@ -188,7 +170,6 @@
                     android:id="@+id/B_2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorSilver"
                     android:text="@string/Number_2"
                     android:textSize="16sp" />
 
@@ -196,7 +177,6 @@
                     android:id="@+id/B_3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorSilver"
                     android:text="@string/Number_3"
                     android:textSize="16sp" />
 
@@ -204,7 +184,6 @@
                     android:id="@+id/B_Plus"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorLightOrange"
                     android:text="@string/commandPlus"
                     android:textSize="20sp" />
             </TableRow>
@@ -218,9 +197,7 @@
                     android:id="@+id/B_Backspace"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorGreen"
                     android:text="@string/additionallyBackspace"
-                    android:textColor="@color/colorLightGray"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -228,7 +205,6 @@
                     android:id="@+id/B_0"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorSilver"
                     android:text="@string/Number_0"
                     android:textSize="16sp" />
 
@@ -236,9 +212,7 @@
                     android:id="@+id/B_Comma"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorGreen"
                     android:text="@string/additionallyComma"
-                    android:textColor="@color/colorLightGray"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 
@@ -246,7 +220,6 @@
                     android:id="@+id/B_GetResult"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:backgroundTint="@color/colorOrange"
                     android:text="@string/commandGetResult"
                     android:textSize="20sp" />
             </TableRow>
@@ -259,7 +232,6 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
-            android:backgroundTint="@color/colorDarkGray"
             android:text="@string/B_GetHelp_TEXT" />
 
     </RelativeLayout>
