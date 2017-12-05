@@ -2,10 +2,12 @@ package itsoftware.datdot.my_calculator;
 
 class Classic {
 
-    String EnterNumber(int a) {
+    String EnterNumber(int a, String mString) {
         switch (a) {
             case R.id.B_0:
-                a = 0;
+                if (!mString.equals("0")) {
+                    a = 0;
+                } else a = -1;
                 break;
             case R.id.B_1:
                 a = 1;
@@ -35,7 +37,10 @@ class Classic {
                 a = 9;
                 break;
         }
-        return String.valueOf(a);
+        if (a == -1) {
+            mString = mString + "";
+        } else mString = mString + String.valueOf(a);
+        return mString;
     }
 
     String Comma(String mString) {
@@ -70,6 +75,17 @@ class Classic {
             } else {
                 mString = "-" + mString;
             }
+        }
+        return mString;
+    }
+
+    String Plus(String mString) {
+        if (!mString.equals("")) {
+            mString = mString.replace(",", ".");
+            float a = Float.valueOf(mString);
+            float b = Float.valueOf(mString);
+            int Result = Math.round(a + b);
+            mString = String.valueOf(Result);
         }
         return mString;
     }

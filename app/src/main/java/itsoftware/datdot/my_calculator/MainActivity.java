@@ -248,7 +248,9 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onClick(View view) {
-        final Animation animation = AnimationUtils.loadAnimation(this, R.anim.button_alpha_change);
+        final Animation ButtonNumbers = AnimationUtils.loadAnimation(this, R.anim.button_alpha_change);
+        final Animation ButtonAction = AnimationUtils.loadAnimation(this, R.anim.button_action_change);
+        final Animation ButtonFunction = AnimationUtils.loadAnimation(this, R.anim.button_function);
         if (mString.length() != 7) {
             switch (view.getId()) {
                 case R.id.B_GetHelp:
@@ -256,36 +258,48 @@ public class MainActivity extends AppCompatActivity
                     overridePendingTransition(R.anim.slide_from_down, 0);
                     break;
                 case R.id.B_Comma:
+                    view.startAnimation(ButtonAction);
                     mString = classic.Comma(mString);
                     mTextView.setText(mString);
                     break;
                 case R.id.B_AllClear:
+                    view.startAnimation(ButtonAction);
                     mString = classic.AllClear();
                     mTextView.setText(mString);
                     break;
                 case R.id.B_Backspace:
+                    view.startAnimation(ButtonAction);
                     mString = classic.Backspace(mString);
                     mTextView.setText(mString);
                     break;
                 case R.id.B_ChangeSign:
+                    view.startAnimation(ButtonAction);
                     mString = classic.ChangeSign(mString);
                     mTextView.setText(mString);
                     break;
                 case R.id.B_Percentage:
+                    view.startAnimation(ButtonAction);
                     break;
                 case R.id.B_Plus:
+                    view.startAnimation(ButtonFunction);
+                    mString = classic.Plus(mString);
+                    mTextView.setText(mString);
                     break;
                 case R.id.B_Minus:
+                    view.startAnimation(ButtonFunction);
                     break;
                 case R.id.B_Divide:
+                    view.startAnimation(ButtonFunction);
                     break;
                 case R.id.B_Multiply:
+                    view.startAnimation(ButtonFunction);
                     break;
                 case R.id.B_GetResult:
+                    view.startAnimation(ButtonFunction);
                     break;
                 default:
-                    view.startAnimation(animation);
-                    mString = mString + classic.EnterNumber(view.getId());
+                    view.startAnimation(ButtonNumbers);
+                    mString = classic.EnterNumber(view.getId(), mString);
                     mTextView.setText(mString);
                     break;
             }
