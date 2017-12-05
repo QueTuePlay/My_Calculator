@@ -7,6 +7,8 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
@@ -82,6 +84,58 @@ public class MainActivity extends AppCompatActivity
         B_ChangeSign.setOnClickListener(this);
         B_Percentage.setOnClickListener(this);
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            mTextView.setTextColor(getResources().getColor(R.color.colorWhite));
+
+            B_GetHelp.setBackgroundTintList(getResources().getColorStateList(R.color.colorDarklyGray));
+            B_GetHelp.setTextColor(getResources().getColor(R.color.colorDarkly));
+
+            B_0.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
+            B_1.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
+            B_2.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
+            B_3.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
+            B_4.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
+            B_5.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
+            B_6.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
+            B_7.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
+            B_8.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
+            B_9.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
+            B_0.setTextColor(getResources().getColor(R.color.colorDarkly));
+            B_1.setTextColor(getResources().getColor(R.color.colorDarkly));
+            B_2.setTextColor(getResources().getColor(R.color.colorDarkly));
+            B_3.setTextColor(getResources().getColor(R.color.colorDarkly));
+            B_4.setTextColor(getResources().getColor(R.color.colorDarkly));
+            B_5.setTextColor(getResources().getColor(R.color.colorDarkly));
+            B_6.setTextColor(getResources().getColor(R.color.colorDarkly));
+            B_7.setTextColor(getResources().getColor(R.color.colorDarkly));
+            B_8.setTextColor(getResources().getColor(R.color.colorDarkly));
+            B_9.setTextColor(getResources().getColor(R.color.colorDarkly));
+
+            B_Plus.setBackgroundTintList(getResources().getColorStateList(R.color.colorLightlyOrange));
+            B_Minus.setBackgroundTintList(getResources().getColorStateList(R.color.colorLightlyOrange));
+            B_Divide.setBackgroundTintList(getResources().getColorStateList(R.color.colorLightlyOrange));
+            B_Multiply.setBackgroundTintList(getResources().getColorStateList(R.color.colorLightlyOrange));
+            B_GetResult.setBackgroundTintList(getResources().getColorStateList(R.color.colorDarklyOrange));
+            B_Plus.setTextColor(getResources().getColor(R.color.colorDarkly));
+            B_Minus.setTextColor(getResources().getColor(R.color.colorDarkly));
+            B_Divide.setTextColor(getResources().getColor(R.color.colorDarkly));
+            B_Multiply.setTextColor(getResources().getColor(R.color.colorDarkly));
+            B_GetResult.setTextColor(getResources().getColor(R.color.colorDarkly));
+
+            B_Comma.setBackgroundTintList(getResources().getColorStateList(R.color.colorGreen));
+            B_AllClear.setBackgroundTintList(getResources().getColorStateList(R.color.colorGreen));
+            B_Backspace.setBackgroundTintList(getResources().getColorStateList(R.color.colorGreen));
+            B_ChangeSign.setBackgroundTintList(getResources().getColorStateList(R.color.colorGreen));
+            B_Percentage.setBackgroundTintList(getResources().getColorStateList(R.color.colorGreen));
+            B_Comma.setTextColor(getResources().getColor(R.color.colorDarkly));
+            B_AllClear.setTextColor(getResources().getColor(R.color.colorDarkly));
+            B_Backspace.setTextColor(getResources().getColor(R.color.colorDarkly));
+            B_ChangeSign.setTextColor(getResources().getColor(R.color.colorDarkly));
+            B_Percentage.setTextColor(getResources().getColor(R.color.colorDarkly));
+
+            ConstraintLayout.setBackgroundColor(getResources().getColor(R.color.colorDarkly));
+        }
+
         mIntent = new Intent(MainActivity.this, TakeHelp.class);
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -91,11 +145,101 @@ public class MainActivity extends AppCompatActivity
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b) {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        mTextView.setTextColor(getResources().getColor(R.color.colorBlack));
 
+                        B_0.setBackgroundTintList(getResources().getColorStateList(R.color.colorDarkly));
+                        B_1.setBackgroundTintList(getResources().getColorStateList(R.color.colorDarkly));
+                        B_2.setBackgroundTintList(getResources().getColorStateList(R.color.colorDarkly));
+                        B_3.setBackgroundTintList(getResources().getColorStateList(R.color.colorDarkly));
+                        B_4.setBackgroundTintList(getResources().getColorStateList(R.color.colorDarkly));
+                        B_5.setBackgroundTintList(getResources().getColorStateList(R.color.colorDarkly));
+                        B_6.setBackgroundTintList(getResources().getColorStateList(R.color.colorDarkly));
+                        B_7.setBackgroundTintList(getResources().getColorStateList(R.color.colorDarkly));
+                        B_8.setBackgroundTintList(getResources().getColorStateList(R.color.colorDarkly));
+                        B_9.setBackgroundTintList(getResources().getColorStateList(R.color.colorDarkly));
+                        B_0.setTextColor(getResources().getColor(R.color.colorLightlyGray));
+                        B_1.setTextColor(getResources().getColor(R.color.colorLightlyGray));
+                        B_2.setTextColor(getResources().getColor(R.color.colorLightlyGray));
+                        B_3.setTextColor(getResources().getColor(R.color.colorLightlyGray));
+                        B_4.setTextColor(getResources().getColor(R.color.colorLightlyGray));
+                        B_5.setTextColor(getResources().getColor(R.color.colorLightlyGray));
+                        B_6.setTextColor(getResources().getColor(R.color.colorLightlyGray));
+                        B_7.setTextColor(getResources().getColor(R.color.colorLightlyGray));
+                        B_8.setTextColor(getResources().getColor(R.color.colorLightlyGray));
+                        B_9.setTextColor(getResources().getColor(R.color.colorLightlyGray));
+
+                        B_Plus.setBackgroundTintList(getResources().getColorStateList(R.color.colorLightlyOrangeDark));
+                        B_Minus.setBackgroundTintList(getResources().getColorStateList(R.color.colorLightlyOrangeDark));
+                        B_Divide.setBackgroundTintList(getResources().getColorStateList(R.color.colorLightlyOrangeDark));
+                        B_Multiply.setBackgroundTintList(getResources().getColorStateList(R.color.colorLightlyOrangeDark));
+                        B_GetResult.setBackgroundTintList(getResources().getColorStateList(R.color.colorDarklyOrangeDark));
+                        B_Plus.setTextColor(getResources().getColor(R.color.colorLightlyGray));
+                        B_Minus.setTextColor(getResources().getColor(R.color.colorLightlyGray));
+                        B_Divide.setTextColor(getResources().getColor(R.color.colorLightlyGray));
+                        B_Multiply.setTextColor(getResources().getColor(R.color.colorLightlyGray));
+                        B_GetResult.setTextColor(getResources().getColor(R.color.colorLightlyGray));
+
+                        B_Comma.setBackgroundTintList(getResources().getColorStateList(R.color.colorDarklyGreen));
+                        B_AllClear.setBackgroundTintList(getResources().getColorStateList(R.color.colorDarklyGreen));
+                        B_Backspace.setBackgroundTintList(getResources().getColorStateList(R.color.colorDarklyGreen));
+                        B_ChangeSign.setBackgroundTintList(getResources().getColorStateList(R.color.colorDarklyGreen));
+                        B_Percentage.setBackgroundTintList(getResources().getColorStateList(R.color.colorDarklyGreen));
+                        B_Comma.setTextColor(getResources().getColor(R.color.colorLightlyGray));
+                        B_AllClear.setTextColor(getResources().getColor(R.color.colorLightlyGray));
+                        B_Backspace.setTextColor(getResources().getColor(R.color.colorLightlyGray));
+                        B_ChangeSign.setTextColor(getResources().getColor(R.color.colorLightlyGray));
+                        B_Percentage.setTextColor(getResources().getColor(R.color.colorLightlyGray));
+
+                        ConstraintLayout.setBackgroundColor(getResources().getColor(R.color.colorLightlyGray));
                     }
                 } else {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        mTextView.setTextColor(getResources().getColor(R.color.colorWhite));
 
+                        B_0.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
+                        B_1.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
+                        B_2.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
+                        B_3.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
+                        B_4.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
+                        B_5.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
+                        B_6.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
+                        B_7.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
+                        B_8.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
+                        B_9.setBackgroundTintList(getResources().getColorStateList(R.color.colorSilver));
+                        B_0.setTextColor(getResources().getColor(R.color.colorDarkly));
+                        B_1.setTextColor(getResources().getColor(R.color.colorDarkly));
+                        B_2.setTextColor(getResources().getColor(R.color.colorDarkly));
+                        B_3.setTextColor(getResources().getColor(R.color.colorDarkly));
+                        B_4.setTextColor(getResources().getColor(R.color.colorDarkly));
+                        B_5.setTextColor(getResources().getColor(R.color.colorDarkly));
+                        B_6.setTextColor(getResources().getColor(R.color.colorDarkly));
+                        B_7.setTextColor(getResources().getColor(R.color.colorDarkly));
+                        B_8.setTextColor(getResources().getColor(R.color.colorDarkly));
+                        B_9.setTextColor(getResources().getColor(R.color.colorDarkly));
+
+                        B_Plus.setBackgroundTintList(getResources().getColorStateList(R.color.colorLightlyOrange));
+                        B_Minus.setBackgroundTintList(getResources().getColorStateList(R.color.colorLightlyOrange));
+                        B_Divide.setBackgroundTintList(getResources().getColorStateList(R.color.colorLightlyOrange));
+                        B_Multiply.setBackgroundTintList(getResources().getColorStateList(R.color.colorLightlyOrange));
+                        B_GetResult.setBackgroundTintList(getResources().getColorStateList(R.color.colorDarklyOrange));
+                        B_Plus.setTextColor(getResources().getColor(R.color.colorDarkly));
+                        B_Minus.setTextColor(getResources().getColor(R.color.colorDarkly));
+                        B_Divide.setTextColor(getResources().getColor(R.color.colorDarkly));
+                        B_Multiply.setTextColor(getResources().getColor(R.color.colorDarkly));
+                        B_GetResult.setTextColor(getResources().getColor(R.color.colorDarkly));
+
+                        B_Comma.setBackgroundTintList(getResources().getColorStateList(R.color.colorGreen));
+                        B_AllClear.setBackgroundTintList(getResources().getColorStateList(R.color.colorGreen));
+                        B_Backspace.setBackgroundTintList(getResources().getColorStateList(R.color.colorGreen));
+                        B_ChangeSign.setBackgroundTintList(getResources().getColorStateList(R.color.colorGreen));
+                        B_Percentage.setBackgroundTintList(getResources().getColorStateList(R.color.colorGreen));
+                        B_Comma.setTextColor(getResources().getColor(R.color.colorDarkly));
+                        B_AllClear.setTextColor(getResources().getColor(R.color.colorDarkly));
+                        B_Backspace.setTextColor(getResources().getColor(R.color.colorDarkly));
+                        B_ChangeSign.setTextColor(getResources().getColor(R.color.colorDarkly));
+                        B_Percentage.setTextColor(getResources().getColor(R.color.colorDarkly));
+
+                        ConstraintLayout.setBackgroundColor(getResources().getColor(R.color.colorDarkly));
                     }
                 }
             }
@@ -104,25 +248,43 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onClick(View view) {
+        final Animation animation = AnimationUtils.loadAnimation(this, R.anim.button_alpha_change);
         if (mString.length() != 7) {
             switch (view.getId()) {
-                case R.id.B_AllClear:
-                    mString = classic.AllClear(mString);
-                    mTextView.setText(mString);
-                    break;
                 case R.id.B_GetHelp:
                     startActivity(mIntent);
                     overridePendingTransition(R.anim.slide_from_down, 0);
-                    break;
-                case R.id.B_Backspace:
-                    mString = classic.Backspace(mString);
-                    mTextView.setText(mString);
                     break;
                 case R.id.B_Comma:
                     mString = classic.Comma(mString);
                     mTextView.setText(mString);
                     break;
+                case R.id.B_AllClear:
+                    mString = classic.AllClear();
+                    mTextView.setText(mString);
+                    break;
+                case R.id.B_Backspace:
+                    mString = classic.Backspace(mString);
+                    mTextView.setText(mString);
+                    break;
+                case R.id.B_ChangeSign:
+                    mString = classic.ChangeSign(mString);
+                    mTextView.setText(mString);
+                    break;
+                case R.id.B_Percentage:
+                    break;
+                case R.id.B_Plus:
+                    break;
+                case R.id.B_Minus:
+                    break;
+                case R.id.B_Divide:
+                    break;
+                case R.id.B_Multiply:
+                    break;
+                case R.id.B_GetResult:
+                    break;
                 default:
+                    view.startAnimation(animation);
                     mString = mString + classic.EnterNumber(view.getId());
                     mTextView.setText(mString);
                     break;

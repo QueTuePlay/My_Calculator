@@ -1,8 +1,8 @@
 package itsoftware.datdot.my_calculator;
 
-public class Classic {
+class Classic {
 
-    public String EnterNumber(int a) {
+    String EnterNumber(int a) {
         switch (a) {
             case R.id.B_0:
                 a = 0;
@@ -38,20 +38,38 @@ public class Classic {
         return String.valueOf(a);
     }
 
-    public String AllClear(String mString) {
-        return mString = "";
-    }
-
-    public String Comma(String mString) {
-        if (!mString.contains(",")) {
+    String Comma(String mString) {
+        if (!mString.contains(",") && !mString.equals("")) {
             mString = mString + ",";
         }
         return mString;
     }
 
-    public String Backspace(String mString) {
-        if (mString.length() != 0) {
-            mString = mString.substring(0, mString.length() - 1);
+    String AllClear() {
+        return "";
+    }
+
+    String Backspace(String mString) {
+        try {
+            if (mString.charAt(0) == '-' && mString.length() == 2) {
+                mString = "";
+            }
+            if (mString.length() != 0) {
+                mString = mString.substring(0, mString.length() - 1);
+            }
+        } catch (Exception ex) {
+            mString = "";
+        }
+        return mString;
+    }
+
+    String ChangeSign(String mString) {
+        if (!mString.equals("")) {
+            if (mString.contains("-")) {
+                mString = mString.substring(1, mString.length());
+            } else {
+                mString = "-" + mString;
+            }
         }
         return mString;
     }

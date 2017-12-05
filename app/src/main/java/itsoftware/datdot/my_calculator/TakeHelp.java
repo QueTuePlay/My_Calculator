@@ -22,7 +22,7 @@ public class TakeHelp extends AppCompatActivity implements View.OnClickListener 
         TV_GoAway.setTextColor(getResources().getColor(R.color.colorLightlyGray));
 
         Button B_Back = findViewById(R.id.B_Back);
-        B_Back.setBackgroundColor(getResources().getColor(R.color.colorDarklyGrey));
+        B_Back.setBackgroundColor(getResources().getColor(R.color.colorDarklyGray));
         B_Back.setTextColor(getResources().getColor(R.color.colorBlack));
         B_Back.setOnClickListener(this);
     }
